@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/uttam-akarapu.github.io/coronaTracker/static/css/main.3bd663c2.chunk.css",
+    "main.js": "/uttam-akarapu.github.io/coronaTracker/static/js/main.59ab55c4.chunk.js",
+    "main.js.map": "/uttam-akarapu.github.io/coronaTracker/static/js/main.59ab55c4.chunk.js.map",
+    "runtime-main.js": "/uttam-akarapu.github.io/coronaTracker/static/js/runtime-main.095fd129.js",
+    "runtime-main.js.map": "/uttam-akarapu.github.io/coronaTracker/static/js/runtime-main.095fd129.js.map",
+    "static/css/2.69121389.chunk.css": "/uttam-akarapu.github.io/coronaTracker/static/css/2.69121389.chunk.css",
+    "static/js/2.01eca1aa.chunk.js": "/uttam-akarapu.github.io/coronaTracker/static/js/2.01eca1aa.chunk.js",
+    "static/js/2.01eca1aa.chunk.js.map": "/uttam-akarapu.github.io/coronaTracker/static/js/2.01eca1aa.chunk.js.map",
+    "index.html": "/uttam-akarapu.github.io/coronaTracker/index.html",
+    "precache-manifest.0428373f75cea1464831f157aac9818d.js": "/uttam-akarapu.github.io/coronaTracker/precache-manifest.0428373f75cea1464831f157aac9818d.js",
+    "service-worker.js": "/uttam-akarapu.github.io/coronaTracker/service-worker.js",
+    "static/css/2.69121389.chunk.css.map": "/uttam-akarapu.github.io/coronaTracker/static/css/2.69121389.chunk.css.map",
+    "static/css/main.3bd663c2.chunk.css.map": "/uttam-akarapu.github.io/coronaTracker/static/css/main.3bd663c2.chunk.css.map",
+    "static/js/2.01eca1aa.chunk.js.LICENSE.txt": "/uttam-akarapu.github.io/coronaTracker/static/js/2.01eca1aa.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/uttam-akarapu.github.io/coronaTracker/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.095fd129.js",
+    "static/css/2.69121389.chunk.css",
+    "static/js/2.01eca1aa.chunk.js",
+    "static/css/main.3bd663c2.chunk.css",
+    "static/js/main.59ab55c4.chunk.js"
+  ]
+}
