@@ -36,7 +36,7 @@ class App extends Component {
 
       return (
 
-        <Router>
+        <Router basename={window.location.pathname || ''}>
 
         <div className = "container-fluid">
 

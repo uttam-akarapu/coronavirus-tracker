@@ -19,3 +19,6 @@ table thead td{font-weight: 800;text-align: center;}
         margin-bottom: 30px;
     }
 }
+
+.worldListTable {box-shadow: 6px 6px 15px #227b8b;
+    background: #ddfcff;}
