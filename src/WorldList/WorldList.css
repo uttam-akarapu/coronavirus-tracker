@@ -1,0 +1,21 @@
+.countryListContainer{
+
+    margin-top:120px;
+
+}
+
+ 
+
+table td{border-bottom:1px solid;box-sizing: border-box;padding:10px;text-align: center;}
+
+table{border-collapse: collapse;border: 1px solid;}
+
+table thead td{font-weight: 800;text-align: center;}
+
+@media (max-width:991px)
+{
+    .worldListTable {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+}

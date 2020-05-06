@@ -1,0 +1,65 @@
+.mainMenu li {
+
+    display: inline-block;
+
+    position: relative;
+
+    padding: 20px;
+
+    cursor: pointer;
+
+    text-transform: uppercase;
+
+    transition:  transform 1s;
+
+}
+
+.mainMenu li a{
+
+    color:white;
+
+    display:inherit;
+
+    text-decoration: none;
+
+}
+
+.mainMenu li:hover{
+
+    background:grey;
+
+   
+
+}
+
+.mainMenu li:hover a{
+
+    color:black;
+
+}
+
+ 
+
+.coronaLink:hover{
+
+    transform: rotate(360deg);
+
+    transition-timing-function: ease;
+
+    background: transparent !important;
+
+    color:red !important;
+
+   
+
+    
+
+    }
+
+.coronaLink:hover a{
+
+    color:red !important;
+
+}  
+
+ 
