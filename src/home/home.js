@@ -12,9 +12,10 @@ export default class Home extends Component{
 
         return(
 
-            <div className="countryListContainer">
+            <div className="homeContainer">
 
                 <h2>Home Page </h2>
+                <img className="homeImg"></img>
 
             </div>
 

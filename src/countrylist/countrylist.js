@@ -21,6 +21,8 @@ export default class coronaDetails extends Component {
         this.state = {
 
             posts: [],
+            countryRow :[],
+            selectedCountry :"",
 
             errorMsg: ''
 
@@ -32,9 +34,7 @@ export default class coronaDetails extends Component {
 
     componentDidMount() {
 
-        axios
-
-            .get('https://api.covid19api.com/summary')
+        axios.get('https://api.covid19api.com/summary')
 
             .then(response => {
 
@@ -58,13 +58,31 @@ export default class coronaDetails extends Component {
 
     }
 
+    
 
+    countrySelectHandler = (event) =>
+    {
+        
+        this.setState({
+            selectedCountry : event.target.value
+        })
+
+        let result = this.state.posts.filter(obj => {
+            return obj.data.Countries[1].Country === "India"
+          })
+          
+          console.log(result)
+       
+    }
+    
+    
 
     render() {
 
 
 
         const { posts, errorMsg } = this.state
+          
 
         console.log(posts.length);
         
@@ -80,7 +98,23 @@ export default class coronaDetails extends Component {
             }):null
 
 
-            
+         let selectCountries = posts.length
+
+            ? posts.map(post => <select  value= {this.state.selectedCountry} onChange = {this.countrySelectHandler}><option>--Select--</option>{post.data.Countries.map(ctry => {
+
+                return (
+                   
+                    <option>{ctry.Country}</option>                                            
+                )
+
+            }
+
+            )}</select>)
+
+            : null
+
+
+
 
 
         return (
@@ -97,13 +131,9 @@ export default class coronaDetails extends Component {
                     </div>
 
                     <div className="col-sm-9">
-
-                        <select id="sel" onchange="show(this)">
-
-                            <option value="">-- Select --</option>
-
-                        </select>
-
+                        {selectCountries}
+                    
+                        
 
 
                         <table className="countryTable"><thead><tr>
