@@ -100,7 +100,7 @@ export default class coronaDetails extends Component {
 
          let selectCountries = posts.length
 
-            ? posts.map(post => <select  value= {this.state.selectedCountry} onChange = {this.countrySelectHandler}><option>--Select--</option>{post.data.Countries.map(ctry => {
+            ? posts.map(post => <select  value= {this.state.selectedCountry} onChange = {this.countrySelectHandler} className ="selectCountryList"><option>--Select--</option>{post.data.Countries.map(ctry => {
 
                 return (
                    

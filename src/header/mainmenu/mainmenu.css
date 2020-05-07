@@ -4,7 +4,7 @@
 
     position: relative;
 
-    padding: 20px;
+    padding: 10px;
 
     cursor: pointer;
 
@@ -16,6 +16,9 @@
 
 .mainMenu {
     display:flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
 
 }
 
