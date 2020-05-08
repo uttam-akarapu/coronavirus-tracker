@@ -1,18 +1,13 @@
-.countryListContainer{
-
-    margin-top:64px;
+@media (max-width:480px){
+    .countryBlockDetails h4{font-size: 11px !important;}
+    .selectCountryList{width:55% !important}
+    .countryBlockDetails p {
+        min-height: 0px !important;
+        display: block !important;
+        align-items: center;
+    }
 
 }
-
- 
-
-table td{border-bottom:1px solid;box-sizing: border-box;padding:10px;width:100%}
-
-table{border-collapse: collapse;width:100%}
-
-.coronaPage{display: Flex;flex-wrap: wrap;justify-content: space-around;}
-
-.date { font-weight: bolder;}
 
 @media (max-width:991px)
 {
@@ -24,12 +19,81 @@ table{border-collapse: collapse;width:100%}
     width: 100%;
     overflow-x: scroll;
     }
+    .countryBlock{display: block !important;}
+    .countryBlockDetails{text-align: left !important;}
+    .CountryName{margin-bottom: 20px!important;}
     
+}
+
+
+
+
+.countryListContainer{
+
+    margin-top:80px;
 
 }
+
+
+ 
+
+table td{border-bottom:1px solid;box-sizing: border-box;padding:10px;width:100%}
+
+table{border-collapse: collapse;width:100%}
+
+.coronaPage{display: Flex;flex-wrap: wrap;justify-content: space-around;}
+
+.date { 
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+
 
 .countryTable{
     box-shadow: 6px 6px 15px 3px #476ec1;
     background: #f1f8ff;
 }
-.selectCountryList{width: 100%;}
+.selectCountryList{width: 55%!important }
+
+.countryBlockDetails div {
+    padding-right: 10px;
+}
+.countryBlockDetails{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.countryBlockDetails h4 {
+    font-size: 15px;
+}
+
+.CountryName h5 {
+    color: red;
+}
+
+.countryBlock {
+    border: 2px solid #3cd9e9;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+.CountryName {
+    width: 30%;
+}
+.countryBlockDetails span{text-align: center;}
+.searchCountryBox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.countryBlockDetails p {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+}

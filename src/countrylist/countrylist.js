@@ -67,24 +67,43 @@ export default class coronaDetails extends Component {
             selectedCountry : event.target.value
         })
 
-        let result = this.state.posts.filter(obj => {
-            return obj.data.Countries[1].Country === "India"
-          })
-          
-          console.log(result)
-       
+        let cData = [];
+       this.state.posts.filter(obj => {
+            obj.data.Countries.filter(cntry => {
+                if(cntry.Country==event.target.value){
+                    cData.push(cntry)
+                    }
+
+            })
+           })
+
+           this.setState({
+               countryRow : cData
+           })
+           
     }
+
+  fullListhandler = () => {
+        console.log("inside full list handler")
+            this.setState({
+                countryRow : []
+            })
+        }
+    
     
     
 
     render() {
+       
 
 
 
-        const { posts, errorMsg } = this.state
-          
+        const { posts, countryRow, errorMsg } = this.state
+
+                
 
         console.log(posts.length);
+       
         
         const list_date = posts.length
             ? posts.map(post => {
@@ -92,7 +111,11 @@ export default class coronaDetails extends Component {
                 let date = new Date(post.data.Date);
                 let convertedDate = date.toDateString();
                 return (
-                    <p className = "date"><b>Date : {convertedDate}</b></p>
+                    <p className = "date"><b>Date : {convertedDate}</b>
+                    {countryRow.length > 0 &&
+                 <button onClick = {this.fullListhandler} className="fulllist btn btn-primary">Full List</button>  
+                    }
+                    </p>
 
                 )
             }):null
@@ -100,7 +123,7 @@ export default class coronaDetails extends Component {
 
          let selectCountries = posts.length
 
-            ? posts.map(post => <select  value= {this.state.selectedCountry} onChange = {this.countrySelectHandler} className ="selectCountryList"><option>--Select--</option>{post.data.Countries.map(ctry => {
+            ? posts.map(post => <select  value= {this.state.selectedCountry} onChange = {this.countrySelectHandler.bind(this)} className ="selectCountryList form-control"><option>--Select--</option>{post.data.Countries.map(ctry => {
 
                 return (
                    
@@ -113,16 +136,41 @@ export default class coronaDetails extends Component {
 
             : null
 
+            
+            let selectedCountrySection = countryRow.length ?
+                 countryRow.map(selectedRow => {
+                     return (
+                         <div className="countryBlock">
+                             <div className="CountryName">
+                                 <h5>{selectedRow.Country}</h5>
+                             </div>
+                             <div className ="countryBlockDetails">
+                                 <div><p><h4>New Confirmed</h4></p><span>{selectedRow.NewConfirmed}</span></div>
+                                 <div><p><h4>New Deaths</h4></p><span>{selectedRow.NewDeaths}</span></div>
+                                 <div><p><h4>Total Recovered</h4></p><span>{selectedRow.TotalRecovered}</span></div>
+                                 <div><p><h4>Total Deaths</h4></p><span>{selectedRow.TotalDeaths}</span></div>
+                             </div>
 
+                         </div>
+                         
+                         )
+                 }) :null                      
+            
 
-
+             
+            
 
         return (
 
             <div className="countryListContainer">
                 {list_date}
-                   
+
+                <div className = " searchCountryBox form-group">
+                 {selectCountries} 
+                </div>
+                
                 <div className="col-sm-12 coronaPage">
+                
 
                     <div className="col-sm-3">
 
@@ -131,12 +179,14 @@ export default class coronaDetails extends Component {
                     </div>
 
                     <div className="col-sm-9">
-                        {selectCountries}
-                    
                         
 
+                        {countryRow.length ?
 
-                        <table className="countryTable"><thead><tr>
+                        selectedCountrySection
+                        :
+                        
+                        <table className="countryTable table"><thead><tr>
 
                             <td>Country</td>
 
@@ -188,7 +238,7 @@ export default class coronaDetails extends Component {
 
                         </table>
 
-
+                            }
 
                     </div>
 
