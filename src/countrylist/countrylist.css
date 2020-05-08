@@ -81,6 +81,7 @@ table{border-collapse: collapse;width:100%}
     display: flex;
     padding: 20px;
     align-items: center;
+    box-shadow: 6px 6px 15px #4aa69a;
 }
 .CountryName {
     width: 30%;
