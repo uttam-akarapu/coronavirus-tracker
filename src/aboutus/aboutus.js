@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Persons from "../persons/persons";
 import './aboutus.css';
 
  
@@ -14,7 +14,7 @@ export default class AboutUs extends Component{
 
             <div className="countryListContainer">
 
-                <h2>About US page</h2>
+                <Persons/>
 
             </div>
 
