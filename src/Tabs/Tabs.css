@@ -1,0 +1,26 @@
+.persons p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.persons h2 {
+    font-size: 20px;
+    line-height: 20px;
+    margin-right: 3px;
+}
+.persons p span {
+    font-size: 10px;
+}
+.persons {
+    margin-bottom: 30px;
+}
+.persons b {
+    padding-right: 5px;
+    font-size: 10px;
+}
+
+.persondetails span {
+    display: block;
+    font-size: 12px;
+}
