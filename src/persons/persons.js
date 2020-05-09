@@ -24,7 +24,7 @@ class persons extends Component {
         
         return(
 
-            <div className="homeContainer">
+            <div>
 
             {persons.map(person => (
                 
